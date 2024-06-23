@@ -1,17 +1,20 @@
 @echo off
-::nb(new branch) This script creates a new branch based on user input, sets the upstream for the branch, and switches to the new branch.
+::cnp (commit n push) This script adds all changes, commits them with a user-provided message, and pushes the changes to the remote repository.
 
-:: Get the branch name from the user
-set /p branchName="Enter the new branch name: "
+:: Get the commit message from the user
+set /p commitMsg="Enter the commit message: "
 
 :: Navigate to the repository directory (optional, remove if already in the repo directory)
 :: cd path\to\your\repository
 
-:: Create a new branch
-git checkout -b %branchName%
+:: Add all changes
+git add .
 
-:: Set the upstream for the new branch
-git push --set-upstream origin %branchName%
+:: Commit with the provided message
+git commit -m "%commitMsg%"
 
-echo New branch '%branchName%' created and upstream set successfully.
+:: Push the changes
+git push
+
+echo Changes committed and pushed successfully.
 pause

@@ -14,4 +14,3 @@ git checkout -b %branchName%
 git push --set-upstream origin %branchName%
 
 echo New branch '%branchName%' created and upstream set successfully.
-pause

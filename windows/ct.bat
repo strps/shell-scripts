@@ -43,4 +43,3 @@ if %errorlevel% neq 0 (
 )
 
 echo Changes committed and pushed successfully.
-pause

@@ -29,7 +29,6 @@ git commit -m "%commitMsg%"
 :: Check if the commit was successful
 if %errorlevel% neq 0 (
     echo Commit failed. Please try again.
-    pause
     exit /b
 )
 
@@ -38,7 +37,6 @@ git push
 :: Check if the push was successful
 if %errorlevel% neq 0 (
     echo Push failed. Please try again.
-    pause
     exit /b
 )
 
